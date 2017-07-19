@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		019DE5C4F90E18A2A9980EA3 /* Pods_Greetings_Generator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C93F3F5C91DA2897A986B6 /* Pods_Greetings_Generator.framework */; };
 		FDA1786A1F1F89B400035707 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA178691F1F89B400035707 /* AppDelegate.swift */; };
 		FDA1786C1F1F89B400035707 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA1786B1F1F89B400035707 /* ViewController.swift */; };
 		FDA1786F1F1F89B400035707 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA1786D1F1F89B400035707 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		849F7E17546108FC61E7EC41 /* Pods-Greetings Generator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Greetings Generator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Greetings Generator/Pods-Greetings Generator.debug.xcconfig"; sourceTree = "<group>"; };
+		E6C93F3F5C91DA2897A986B6 /* Pods_Greetings_Generator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Greetings_Generator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4454CE7FDEAF58C8E38B5B /* Pods-Greetings Generator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Greetings Generator.release.xcconfig"; path = "Pods/Target Support Files/Pods-Greetings Generator/Pods-Greetings Generator.release.xcconfig"; sourceTree = "<group>"; };
 		FDA178661F1F89B400035707 /* Greetings Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Greetings Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA178691F1F89B400035707 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDA1786B1F1F89B400035707 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019DE5C4F90E18A2A9980EA3 /* Pods_Greetings_Generator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5E47F598E98BECE6ADA1B4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6C93F3F5C91DA2897A986B6 /* Pods_Greetings_Generator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5E1E042D1BEF444018B39D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				849F7E17546108FC61E7EC41 /* Pods-Greetings Generator.debug.xcconfig */,
+				FB4454CE7FDEAF58C8E38B5B /* Pods-Greetings Generator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FDA1785D1F1F89B400035707 = {
 			isa = PBXGroup;
 			children = (
 				FDA178681F1F89B400035707 /* Greetings Generator */,
 				FDA178671F1F89B400035707 /* Products */,
+				D5E1E042D1BEF444018B39D3 /* Pods */,
+				A5E47F598E98BECE6ADA1B4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDA178781F1F89B400035707 /* Build configuration list for PBXNativeTarget "Greetings Generator" */;
 			buildPhases = (
+				B6FB0B88608740BEF412BD45 /* [CP] Check Pods Manifest.lock */,
 				FDA178621F1F89B400035707 /* Sources */,
 				FDA178631F1F89B400035707 /* Frameworks */,
 				FDA178641F1F89B400035707 /* Resources */,
+				C61FDB21CF21E9FA07B2B986 /* [CP] Embed Pods Frameworks */,
+				6DD996FD31DC6EEF580BCDB5 /* [CP] Copy Pods Resources */,
+				FDA1787B1F1F8A3700035707 /* Run Script - SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -131,6 +159,76 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DD996FD31DC6EEF580BCDB5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Greetings Generator/Pods-Greetings Generator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6FB0B88608740BEF412BD45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Greetings Generator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C61FDB21CF21E9FA07B2B986 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Greetings Generator/Pods-Greetings Generator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Greetings Generator/Pods-Greetings Generator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDA1787B1F1F8A3700035707 /* Run Script - SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FDA178621F1F89B400035707 /* Sources */ = {
@@ -261,6 +359,7 @@
 		};
 		FDA178791F1F89B400035707 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 849F7E17546108FC61E7EC41 /* Pods-Greetings Generator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2HBTRJG3KJ;
@@ -274,6 +373,7 @@
 		};
 		FDA1787A1F1F89B400035707 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB4454CE7FDEAF58C8E38B5B /* Pods-Greetings Generator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2HBTRJG3KJ;
@@ -304,6 +404,7 @@
 				FDA1787A1F1F89B400035707 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
